@@ -17,7 +17,6 @@ import com.wikitude.NativeStartupConfiguration;
 import com.wikitude.WikitudeSDK;
 import com.wikitude.common.WikitudeError;
 import com.wikitude.common.camera.CameraSettings;
-import com.wikitude.common.permission.PermissionManager;
 import com.wikitude.common.rendering.RenderExtension;
 import com.wikitude.rendering.ExternalRendering;
 import com.wikitude.tracker.ImageTarget;
@@ -26,8 +25,9 @@ import com.wikitude.tracker.ImageTrackerListener;
 import com.wikitude.tracker.TargetCollectionResource;
 
 
-
 public class ImageTrackingActivity extends Activity implements ImageTrackerListener, ExternalRendering {
+
+
 
     private static final String TAG = "IMAGE TRACKING ACTIVITY";
     WikitudeSDK wikitudeSDK;
@@ -40,6 +40,8 @@ public class ImageTrackingActivity extends Activity implements ImageTrackerListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
 
         wikitudeSDK = new WikitudeSDK(this);
         startupConfiguration = new NativeStartupConfiguration();
