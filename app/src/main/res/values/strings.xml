@@ -55,4 +55,9 @@
         <item>Krzesła balkonowe</item>
     </string-array>
 
+    <string name="tracking_quality_indicator_bad">Tracking Quality: Bad</string>
+    <string name="tracking_quality_indicator_average">Tracking Quality: Average</string>
+    <string name="tracking_quality_indicator_good">Tracking Quality: Good</string>
+    <string name="stop_extended_tracking_button_text">Stop Extended Tracking</string>
+
 </resources>
