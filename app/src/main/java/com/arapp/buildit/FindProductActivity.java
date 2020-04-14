@@ -50,7 +50,7 @@ public class FindProductActivity extends AppCompatActivity {
                                 new PermissionManager.PermissionManagerCallback() {
                                     @Override
                                     public void permissionsGranted(int requestCode) {
-                                        Class activity = ObjectTrackingActivityEx.class;
+                                        Class activity = ObjectTrackingActivity.class;
                                         final Intent intent = new Intent(FindProductActivity.this, activity);
                                         startActivity(intent);
 

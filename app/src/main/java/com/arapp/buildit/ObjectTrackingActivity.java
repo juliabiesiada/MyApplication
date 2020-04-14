@@ -54,7 +54,7 @@ public class ObjectTrackingActivity extends Activity implements ObjectTrackerLis
         startupConfiguration.setCameraResolution(CameraSettings.CameraResolution.AUTO);
         wikitudeSDK.onCreate(getApplicationContext(), this, startupConfiguration);
 
-        final TargetCollectionResource targetCollectionResource = wikitudeSDK.getTrackerManager().createTargetCollectionResource("file:///android_asset/tracker.wto");
+        final TargetCollectionResource targetCollectionResource = wikitudeSDK.getTrackerManager().createTargetCollectionResource("file:///android_asset/card.wto");
         ObjectTrackerConfiguration trackerConfiguration = new ObjectTrackerConfiguration();
         trackerConfiguration.setExtendedTargets(new String[]{"*"});
         ObjectTracker objectTracker = wikitudeSDK.getTrackerManager().createObjectTracker(targetCollectionResource, ObjectTrackingActivity.this, trackerConfiguration);
@@ -151,20 +151,5 @@ public class ObjectTrackingActivity extends Activity implements ObjectTrackerLis
 
     @Override
     public void onExtendedTrackingQualityChanged(final ObjectTracker tracker, final ObjectTarget target, final int oldTrackingQuality, final int newTrackingQuality) {
-        EditText trackingQualityIndicator = findViewById(R.id.tracking_quality_indicator);
-        switch (newTrackingQuality) {
-            case -1:
-                trackingQualityIndicator.setBackgroundColor(Color.parseColor("#FF3420"));
-                trackingQualityIndicator.setText(R.string.tracking_quality_indicator_bad);
-                break;
-            case 0:
-                trackingQualityIndicator.setBackgroundColor(Color.parseColor("#FFD900"));
-                trackingQualityIndicator.setText(R.string.tracking_quality_indicator_average);
-                break;
-            default:
-                trackingQualityIndicator.setBackgroundColor(Color.parseColor("#6BFF00"));
-                trackingQualityIndicator.setText(R.string.tracking_quality_indicator_good);
-        }
-        trackingQualityIndicator.setVisibility(View.VISIBLE);
     }
 }

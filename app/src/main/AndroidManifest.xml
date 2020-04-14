@@ -20,8 +20,6 @@
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity android:name=".ObjectTrackingActivity"
         android:configChanges="orientation|keyboardHidden|screenSize"/>
-        <activity android:name=".ObjectTrackingActivityEx"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
         <activity android:name=".SearchActivity" />
         <activity android:name=".CategoriesActivity" />
         <activity android:name=".FindProductActivity" />
